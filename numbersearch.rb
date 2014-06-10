@@ -3,13 +3,11 @@
 #input = "a string"
 #output = "an integer that is the sum of all numbers in string"
 #EDGECASE: if numbers are at neighboring index then they form one number
+# require 'debugger'
 
 def NumberAddition(str)
-	# alphabet = ('a'..'z').to_a + ('A'..'Z').to_a
-	integers = []
-	str.each_char do |i|
-  		if i.is_a? Integer
-  			integers << i 
-	end
-	integers.inject{|sum,x| sum + x }
+	integers = str.scan(/\d/).map { |x| x.to_i }
+	integers.inject(:+)	
 end
+
+p NumberAddition("there was6 once2")
