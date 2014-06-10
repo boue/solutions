@@ -5,5 +5,5 @@
 #EDGECASE: if numbers are at neighboring index then they form one number
 
 def NumberAddition(str)
-
+	alphabet = ('a'..'z').to_a + ('A'..'Z').to_a
 end
