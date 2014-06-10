@@ -6,8 +6,9 @@
 # require 'debugger'
 
 def NumberAddition(str)
-	integers = str.scan(/\d/).map { |x| x.to_i }
+	integers = str.scan(/\d+/).map { |x| x.to_i }
 	integers.inject(:+)	
 end
 
 p NumberAddition("there was6 once2")
+p NumberAddition("there was66 once2")
