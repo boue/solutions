@@ -6,4 +6,6 @@
 
 def word_count(words)
 	index = Hash.new(0)
+	words.each { |word| index[word] += 1}
+	
 end
