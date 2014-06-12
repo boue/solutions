@@ -7,5 +7,7 @@
 def word_count(words)
 	index = Hash.new(0)
 	words.each { |word| index[word] += 1}
-	
+	index.sort_by { |word, count| count }
 end
+
+p word_count(%w[mice mice atom atom space space space exploration nasa nasa nasa nasa])
