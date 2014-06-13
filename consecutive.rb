@@ -8,6 +8,11 @@ def Consecutive(arr)
 	#step1: check which number is max and which is minimum (can be -)
 	#step2: create an array min..max
 	#step3: compare lengths of both arrays
-
-
+	min = arr.min
+	max = arr.max
+	complete_arr = (min..max).to_a
+	complete_arr.length - arr.length
 end
+
+p Consecutive([4,8,6])
+p Consecutive([1,11])
