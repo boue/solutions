@@ -5,4 +5,20 @@
 
 def LetterCount(str)
 
+	#step1: split into words 
+	#step2: for each word count the letter that occurs the most
+	#step3: return the word with highest count 
+	arr = str.split(" ")
+	max = 0 
+		arr.each do |word|
+			word.chars.each do |letter|
+				if word.count(letter) > max 
+					p word
+					max = word
+				end
+				return max
+			end
+		end
 end
+
+p LetterCount("Today, is the greatest day ever!")
