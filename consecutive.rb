@@ -5,7 +5,9 @@
 
 def Consecutive(arr)
 	return nil if arr.length < 2
+	#step1: check which number is max and which is minimum (can be -)
+	#step2: create an array min..max
+	#step3: compare lengths of both arrays
 
 
-	
 end
