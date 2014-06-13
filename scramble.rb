@@ -3,11 +3,11 @@
 
 
 def StringScramble(str1,str2)
-  # take str1 and str2 and sort them in alphabetical order
- 	ordered1 = str1.chars.sort.join 
- 	ordered2 = str2.chars.sort.join 
- 	p ordered1
- 	p ordered2
+ 	str2.each_char do |letter|
+     return false if !(str1.include?(letter)) 
+	 return true
+	end
 end
 
-StringScramble("howare", "bca")
+
+p StringScramble("rkqodlw", "world")
