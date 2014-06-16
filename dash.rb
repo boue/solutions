@@ -7,12 +7,13 @@ def DashInsert(num)
   # step2: determine whether a number is odd or not and grab index 
   # step3: insert a dash after it 
 
-  num_arr = num.to_s
-  num_arr.each_char do |n|
-  	if n % 3 = 0 
-  		str.insert(i+1, '-')
-  	end
-  end
+  num.scan(/[13597]{2}|.+/).join("-")
+  # num_arr = num.to_s
+  # num_arr.each_char do |n|
+  # 	if n % 3 = 0 
+  # 		str.insert(i+1, '-')
+  # 	end
+  # end
   # code goes here 
    
 end
