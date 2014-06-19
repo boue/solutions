@@ -18,3 +18,10 @@ for key in prices:
     print key
     print "price: %s" % prices[key]
     print "stock: %s" % stock[key]
+
+# creating another loop that allows us to do some accounting and see how much total value 
+# we have of each item
+ total = 0 
+ for key in prices:
+ 	total += prices[key] * stock[key]
+ print total 
