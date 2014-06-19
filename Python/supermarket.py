@@ -25,3 +25,11 @@ for key in prices:
  for key in prices:
  	total += prices[key] * stock[key]
  print total 
+
+ # a user can also complete a bill 
+
+ def compute_bill(food):
+ 	total = 0
+ 	for item in food:
+ 		total += prices[item]
+ 	return total
