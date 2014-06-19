@@ -11,3 +11,10 @@ stock = {
     "orange": 32,
     "pear": 15,
 }
+
+# loop in order to display the price and quantity of each item
+
+for key in prices:
+    print key
+    print "price: %s" % prices[key]
+    print "stock: %s" % stock[key]
