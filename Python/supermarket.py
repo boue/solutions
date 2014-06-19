@@ -1,9 +1,14 @@
+#This exerpt was from my codeacademy exercise that I completed in order to get a good
+#hold on Python syntax 
+
 prices = {
     "banana": 4,
     "apple": 2,
     "orange": 1.5,
     "pear": 3
 }
+
+shopping_list = ["banana", "orange", "apple"]
 
 stock = {
     "banana": 6,
@@ -27,9 +32,12 @@ for key in prices:
  print total 
 
  # a user can also complete a bill 
-
- def compute_bill(food):
+def compute_bill(food):
  	total = 0
  	for item in food:
- 		total += prices[item]
+ 		#add a clause to check if item is in stock then reduce stock item by one
+ 		if stock[item] > 0:
+ 			total += prices[item]
+ 			stock[item] = stock[item] - 1
  	return total
+
