@@ -1,12 +1,15 @@
 def CaesarCipher(str,num)
 	alphabet = ('a'..'z').to_a
 	original = str.downcase.split("")
-	original.each_with_index do |letter, index|
+	adjusted = []
+	original.each do |letter|
 		if alphabet.include? (letter)
-			
+			result << alphabet[letter[index] + num]
+		else 
+			result << letter
 		end
 	end
-	return original
+	result.join("")
 	#define a an array that holds all letters of alphabet 
 	#downcase string 
 	#if a letter then take index and move 2 up
