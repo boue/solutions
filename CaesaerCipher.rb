@@ -4,12 +4,13 @@ def CaesarCipher(str,num)
 	adjusted = []
 	original.each do |letter|
 		if alphabet.include? (letter)
-			result << alphabet[letter[index] + num]
+			adjusted << alphabet[alphabet.index(letter) + num]
 		else 
-			result << letter
+			adjusted << letter
 		end
 	end
-	result.join("")
+	p adjusted
+	adjusted.join("")
 	#define a an array that holds all letters of alphabet 
 	#downcase string 
 	#if a letter then take index and move 2 up
@@ -17,3 +18,5 @@ def CaesarCipher(str,num)
 end
 
 p CaesarCipher("ABC", 1)
+p CaesarCipher("Hello", 4)
+p CaesarCipher("aPPlication", 2)
