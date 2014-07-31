@@ -1,0 +1,3 @@
+def CheckNum(num)
+
+end
