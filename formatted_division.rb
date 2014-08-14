@@ -1,11 +1,15 @@
 #input: two numbers
 #output: formatted commas and 4 digits after decimal
 def formatted_division(num1, num2)
-	num = num1.to_f / num2.to_f
-	num.round(4)
-
+	num = (num1.to_f / num2.to_f).round(4)
+	#match the last 4 digits 
+	ending_trail = /([.]\d{4})/
+	rounded_part = num.to_s.match(ending_trail)[0]
+	comma_numbers(num).concat(rounded_part)
 end
 
-p formatted_division(2,4.5)
-p formatted_division(2.2,4.5)
-p formatted_division(1,231.342342)
+def comma_numbers(number)
+  number.to_i.to_s.reverse.gsub(/(\d{3})/,"\\1,").chomp(",").reverse
+end
+
+p formatted_division(10000000, 23.1)
