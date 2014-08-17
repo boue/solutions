@@ -1,8 +1,8 @@
 def number_search(str)
 	array_of_num = str.scan(/\d/).join('').split("").collect { |n| n.to_i }
-	total = add_numbers(array_of_num)
+	total_num_integers = add_numbers(array_of_num)
 	total_num_letters = strip_numbers(str)
-	p (total/total_num_letters).round
+	p (total_num_integers/total_num_letters).round
 end
 
 def add_numbers(arr)
