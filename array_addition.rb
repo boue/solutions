@@ -1,10 +1,11 @@
 def array_addition(arr)
-	max = 0 
 	arr.each do |n|
+	max = 0 
 		if n > max 
 			max = n 
 		end
+	p max
 	end
 end
 
-p array_addition([0,2,12])
+array_addition([0,2,12])
