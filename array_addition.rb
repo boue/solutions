@@ -1,11 +1,13 @@
 def array_addition(arr)
-	arr.each do |n|
-	max = 0 
-		if n > max 
-			max = n 
+	largest = arr.max  
+	arr.delete(arr.max)
+
+	(1..arr.length).each do |x|
+		arr.permutation(x).to_a.each do |y|
+			return true if y.inject(:+)== largest
 		end
-	p max
 	end
+	false
 end
 
-array_addition([0,2,12])
+p array_addition([0,2,12])
